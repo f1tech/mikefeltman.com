@@ -1,8 +1,6 @@
 import React, { useContext, useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
-// import TextareaAutosize from "@material-ui/core/TextareaAutosize";
-// import InputLabel from "@material-ui/core/InputLabel";
 import SiteContext from "./siteContext";
 import FormGroup from "@material-ui/core/FormGroup";
 import Card from "@material-ui/core/Card";
@@ -13,21 +11,13 @@ import IconButton from "@material-ui/core/IconButton";
 import SendIcon from "@material-ui/icons/Send";
 
 // TODO: Binding
-// TODO: Make the Send Button a FAB!
+// TODO: Make the Send Button a FAB
 // TODO: Implement validation & sending the actual email.
-// TODO: Make headings bigger on desktop.
 const useStyles = makeStyles(theme => ({
   textField: {
     marginLeft: theme.spacing(1),
     marginRight: theme.spacing(1)
-  },
-  inputLabel: {
-    margin: theme.spacing(1)
-  },
-  textArea: {}
-  // card: {
-  //   maxWidth: 1000
-  // }
+  }
 }));
 
 const F1ContactForm = () => {
@@ -52,7 +42,7 @@ const F1ContactForm = () => {
   };
 
   return (
-    <Card className={classes.card}>
+    <Card>
       <CardHeader
         avatar={site.avatar && <Avatar src={site.avatar} />}
         action={
@@ -74,6 +64,7 @@ const F1ContactForm = () => {
               onChange={handleChange}
               margin="normal"
               required
+              aria-describedby="First Name"
             />
             <TextField
               id="lastName"
@@ -89,6 +80,7 @@ const F1ContactForm = () => {
             <TextField
               id="from"
               label="Email Address"
+              type="email"
               className={classes.textField}
               value={contactInfo.from}
               onChange={handleChange}
@@ -119,21 +111,9 @@ const F1ContactForm = () => {
               onChange={handleChange}
               margin="normal"
               required
+              variant="outlined"
             />
           </FormGroup>
-          {/* <FormGroup>
-            <InputLabel className={classes.inputLabel}>Message</InputLabel>
-            <TextareaAutosize
-              id="message"
-              // label="Message"
-              rows={3}
-              // fullwidth
-              className={classes.textField}
-              // value={values.name}
-              // onChange={handleChange("name")}
-              margin="normal"
-            />
-          </FormGroup> */}
         </form>
       </CardContent>
     </Card>
