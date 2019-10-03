@@ -21,7 +21,6 @@ const useStyles = makeStyles(theme => ({
 const About = props => {
   const site = useContext(SiteContext);
   const classes = useStyles();
-  console.log(props);
   return (
     <Card>
       <CardHeader

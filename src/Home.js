@@ -1,6 +1,6 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import Button from "@material-ui/core/Button";
-import mfFire from "./img/mffire.jpg";
+import profilePic from "./img/mffire.jpg";
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import { CardHeader } from "@material-ui/core";
@@ -40,13 +40,20 @@ const useStyles = makeStyles(theme => ({
   overlayText: {
     position: "absolute",
     color: "white",
-    overflow: "scroll"
+    overflow: "scroll",
+    textAlign: "left"
   }
 }));
 
 const Home = props => {
   const [leftText, setLeftText] = useState("");
   const [rightText, setRightText] = useState("");
+  useEffect(() => {
+    window.addEventListener("resize", setTermPosition);
+    return () => {
+      window.removeEventListener("resize", setTermPosition);
+    };
+  });
 
   const classes = useStyles();
   const imageEl = useRef(null);
@@ -59,29 +66,25 @@ const Home = props => {
     let displayTerm = terms.find(term => {
       return term.word.toLowerCase() === word.toLowerCase();
     });
-
-    //TODO: Add a second element on the right and move the details about Mike there.
-    //TODO: On mobile display all of this in a dialog.
-    leftTextEl.current.style.position = "absolute";
     setLeftText(`${displayTerm.word}: ${displayTerm.definition}`);
     setRightText(displayTerm.details);
-
+    setTermPosition();
+  };
+  const setTermPosition = () => {
+    console.log("setting position");
+    //TODO: On mobile display all of this in a dialog.
     let rectangle = imageEl.current.getBoundingClientRect();
-    leftTextEl.current.style.position = "absolute";
     leftTextEl.current.style.left = rectangle.left + 5 + "px";
     leftTextEl.current.style.top = rectangle.top + "px";
     leftTextEl.current.style.maxWidth = rectangle.width / 3 - 5 + "px";
-    leftTextEl.current.style.textAlign = "left";
 
-    rightTextEl.current.style.position = "absolute";
     rightTextEl.current.style.left = (rectangle.width / 3) * 2 + "px";
     rightTextEl.current.style.top = rectangle.top + "px";
     rightTextEl.current.style.maxWidth = rectangle.width / 3 - 5 + "px";
     rightTextEl.current.style.left =
       rectangle.right - rectangle.width / 3 + "px";
-
-    rightTextEl.current.style.textAlign = "left";
   };
+
   return (
     <Card className={classes.mfCard}>
       <CardHeader
@@ -148,8 +151,7 @@ const Home = props => {
         <CardMedia
           component="img"
           alt="Mike Feltman"
-          src={mfFire}
-          // backgroundImage={mfFire}
+          src={profilePic}
           title="Mike Feltman"
           ref={imageEl}
         />
