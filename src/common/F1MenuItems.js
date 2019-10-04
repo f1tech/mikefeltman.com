@@ -3,24 +3,26 @@ import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
-import SiteContext from "./siteContext";
-import { withStyles } from "@material-ui/core/styles";
+import SiteContext from "../siteContext";
+import { makeStyles } from "@material-ui/core/styles";
 import { Link } from "react-router-dom";
+import F1Styles from "./F1Styles";
 
-const styles = theme => ({
-  listItemText: {
+const useStyles = makeStyles(theme => ({
+  ...F1Styles(theme),
+  menuItemText: {
     color: "navy"
   },
-  linkButton: {
+  menuItemLink: {
     width: "20px",
     height: "20px",
     marginRight: "33px",
     marginLeft: "2px"
   }
-});
+}));
 
 const F1MenuItems = props => {
-  const { classes } = props;
+  const classes = useStyles();
   const site = useContext(SiteContext);
 
   const itemClick = item => {
@@ -48,14 +50,14 @@ const F1MenuItems = props => {
               <img
                 src={`${item.img}`}
                 alt={item.link}
-                className={classes.linkButton}
+                className={classes.menuItemLink}
               />
             ) : (
               ""
             )}
             {item.label ? (
               <ListItemText
-                classes={{ primary: classes.listItemText }}
+                classes={{ primary: classes.menuItemText }}
                 primary={item.label}
               />
             ) : (
@@ -66,5 +68,4 @@ const F1MenuItems = props => {
     </List>
   );
 };
-
-export default withStyles(styles)(F1MenuItems);
+export default F1MenuItems;

@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import SiteContext from "./siteContext";
+import SiteContext from "../siteContext";
 import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import Hidden from "@material-ui/core/Hidden";
@@ -56,30 +56,3 @@ export default function F1BottomNav() {
     </Hidden>
   );
 }
-
-// {site.navItems
-//         .filter(item => item.social === true)
-//         .map((button, idx) => (
-//           <Tooltip title={button.tip} key={idx}>
-//             {button.img ? (
-//               <IconButton href={`${button.link}`}>
-//                 <img
-//                   src={`${button.img}`}
-//                   alt={button.link}
-//                   className={classes.linkButton}
-//                 />
-//               </IconButton>
-//             ) : (
-//               <IconButton size="medium">{button.icon}</IconButton>
-//             )}
-//           </Tooltip>
-//         ))}
-//     <>
-//       site.navItems
-//         .filter(item => item.top === true)
-//         .map((item, idx) => (
-//           {renderButton(item,idx)}
-//         ))
-//     </>
-//   );
-// }

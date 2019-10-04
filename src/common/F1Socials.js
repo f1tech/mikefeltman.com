@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import Tooltip from "@material-ui/core/Tooltip";
 import IconButton from "@material-ui/core/IconButton";
 import { makeStyles } from "@material-ui/core/styles";
-import SiteContext from "./siteContext";
+import SiteContext from "../siteContext";
 
 const useStyles = makeStyles(theme => ({
   linkButton: {

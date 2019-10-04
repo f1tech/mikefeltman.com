@@ -8,9 +8,12 @@ import Home from "./Home";
 import About from "./About";
 import Services from "./Services";
 import Contact from "./Contact";
-import AuthService from "./F1AuthService.js";
-import F1Storage from "./F1Storage";
+import AuthService from "./common/F1AuthService";
+import F1Storage from "./common/F1Storage";
 
+/* just a workaround right now so I can specify props in the components. 
+I haven't figured out how to pass them yet. */
+let props;
 /* Because we are not exporting a component from here, we can't
 use the useStyles hook, so an inline style is used for consistency here.
 */
@@ -54,7 +57,7 @@ const site = {
       bottom: true,
       drawer: true,
       top: true,
-      component: <About />
+      component: <About {...props} />
     },
     {
       label: "Services",
@@ -63,7 +66,7 @@ const site = {
       bottom: true,
       drawer: true,
       top: true,
-      component: <Services />
+      component: <Services {...props} />
     },
     {
       label: "Resume",
@@ -114,14 +117,14 @@ const site = {
       bottom: true,
       drawer: true,
       top: true,
-      component: <Contact />
+      component: <Contact {...props} />
     },
     {
       icon: <EmailIcon style={linkButton} />,
       route: "contact",
       tip: "Get in touch",
       social: true,
-      component: <Contact />
+      component: <Contact {...props} />
     }
   ]
 };

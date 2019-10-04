@@ -6,16 +6,10 @@ import Avatar from "@material-ui/core/Avatar";
 import SiteContext from "./siteContext";
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
+import F1Styles from "./common/F1Styles";
 
 const useStyles = makeStyles(theme => ({
-  avatar: {
-    height: 80,
-    width: 80
-  },
-  cardContent: {
-    textAlign: "justify",
-    marginBottom: 8
-  }
+  ...F1Styles(theme)
 }));
 
 const About = props => {

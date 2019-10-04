@@ -3,8 +3,8 @@ import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
-import F1Location from "./F1Location";
-import F1ContactForm from "./F1ContactForm";
+import F1Location from "./common/F1Location";
+import F1ContactForm from "./common/F1ContactForm";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -23,7 +23,8 @@ function TabPanel(props) {
   );
 }
 
-const Contact = () => {
+const Contact = props => {
+  console.log({ props });
   const [tabIndex, setTabIndex] = useState(0);
   const changeTab = (event, newValue) => {
     setTabIndex(newValue);
@@ -35,7 +36,10 @@ const Contact = () => {
         <Tab label="Location" value={1}></Tab>
       </Tabs>
       <TabPanel value={tabIndex} index={0}>
-        <F1ContactForm />
+        <F1ContactForm
+          title="Email Me!"
+          subtitle="I'd love to hear from you!"
+        />
       </TabPanel>
       <TabPanel value={tabIndex} index={1}>
         <F1Location />

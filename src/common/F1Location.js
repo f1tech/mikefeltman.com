@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import Hidden from "@material-ui/core/Hidden";
-import SiteContext from "./siteContext";
+import SiteContext from "../siteContext";
 
 /* TODO: refactor this to use an array of objects for the dimensions and breakpoints. Have a size for every breakpoint.*/
 const F1Location = props => {

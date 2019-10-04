@@ -7,16 +7,18 @@ import Typography from "@material-ui/core/Typography";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import { BrowserRouter as Router } from "react-router-dom";
-import F1BottomNav from "./F1BottomNav";
-import F1Drawer from "./F1Drawer";
-import F1MenuItems from "./F1MenuItems";
-import F1TopNav from "./F1TopNav";
-import F1Routes from "./F1Routes";
+import F1BottomNav from "./common/F1BottomNav";
+import F1Drawer from "./common/F1Drawer";
+import F1MenuItems from "./common/F1MenuItems";
+import F1TopNav from "./common/F1TopNav";
+import F1Routes from "./common/F1Routes";
 import SiteContext from "./siteContext";
 import { Link } from "react-router-dom";
-import F1SignOn from "./F1SignOn";
+import F1SignOn from "./common/F1SignOn";
+import F1Styles from "./common/F1Styles";
 
 const useStyles = makeStyles(theme => ({
+  ...F1Styles(theme),
   app: {
     margin: theme.spacing(0),
     minHeight: "100vh"
@@ -30,9 +32,6 @@ const useStyles = makeStyles(theme => ({
   appTitle: {
     textDecoration: "none",
     color: "white"
-  },
-  grow: {
-    flexGrow: 1
   },
   loveIcon: {
     color: "red"
@@ -70,14 +69,12 @@ function App() {
             <F1Routes />
           </Grid>
           <Grid item className={classes.footer}>
-            {/* <div className={classes.footer}> */}
             <F1BottomNav />
             <Typography variant="body2" align="center">
               Made with
               <LoveIcon className={classes.loveIcon} />
               in Grosse Pointe Woods, Michigan
             </Typography>
-            {/* </div> */}
           </Grid>
         </Grid>
       </Router>

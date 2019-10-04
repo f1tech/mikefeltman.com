@@ -8,9 +8,11 @@ import Card from "@material-ui/core/Card";
 import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
-import F1Socials from "./F1Socials";
+import F1Socials from "./common/F1Socials";
+import F1Styles from "./common/F1Styles";
 
 const useStyles = makeStyles(theme => ({
+  ...F1Styles(theme),
   App: {
     margin: theme.spacing(2)
   },
@@ -19,9 +21,6 @@ const useStyles = makeStyles(theme => ({
     padding: 0,
     border: 1,
     color: "red"
-  },
-  grow: {
-    flexGrow: 1
   },
   mfCard: {
     marginTop: 5,

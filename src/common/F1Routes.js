@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
-import SiteContext from "./siteContext";
+import SiteContext from "../siteContext";
 // when secure routes are in place we'll need redirect
 // import { Route, Switch, Redirect, withRouter } from "react-router-dom";
 import { Route, Switch, withRouter } from "react-router-dom";
-import Home from "./Home";
+import Home from "../Home";
 
 const F1Routes = props => {
   const site = useContext(SiteContext);

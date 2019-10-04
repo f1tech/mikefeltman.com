@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import BottomNavigation from "@material-ui/core/BottomNavigation";
 import BottomNavigationAction from "@material-ui/core/BottomNavigationAction";
-import SiteContext from "./siteContext";
+import SiteContext from "../siteContext";
 import { makeStyles } from "@material-ui/core/styles";
 import { Link } from "react-router-dom";
 

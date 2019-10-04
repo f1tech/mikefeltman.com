@@ -1,18 +1,20 @@
 import React, { useState, useContext } from "react";
-import PropTypes from "prop-types";
-import { withStyles } from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
 import Drawer from "@material-ui/core/Drawer";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
-import SiteContext from "./siteContext";
+import SiteContext from "../siteContext";
 import Avatar from "@material-ui/core/Avatar";
+import F1Styles from "./F1Styles";
 
 const drawerWidth = 300;
-// Change this to use the new styles hooks!
-const styles = theme => ({
+
+// const styles = theme => ({
+const useStyles = makeStyles(theme => ({
+  ...F1Styles(theme),
   appBar: {
     position: "absolute",
     marginLeft: 0,
@@ -25,13 +27,13 @@ const styles = theme => ({
   menuButton: {
     marginRight: theme.spacing(1)
   },
-  avatar: {
+  drawerAvatar: {
     marginRight: 8,
     marginLeft: -15,
     width: 50,
     height: 50
   }
-});
+}));
 
 const F1Drawer = props => {
   const site = useContext(SiteContext);
@@ -43,7 +45,8 @@ const F1Drawer = props => {
   const toggleDrawer = event => {
     setState(state => ({ drawerOpen: !state.drawerOpen }));
   };
-  const { classes, theme } = props;
+  const classes = useStyles();
+
   return (
     <>
       <IconButton
@@ -57,7 +60,7 @@ const F1Drawer = props => {
       </IconButton>
       <Drawer
         variant="temporary"
-        anchor={theme.direction === "rtl" ? "right" : "left"}
+        anchor="left"
         open={state.drawerOpen}
         onClose={toggleDrawer}
         classes={{
@@ -70,7 +73,7 @@ const F1Drawer = props => {
         <AppBar className={classes.appBar}>
           <Toolbar className={classes.toolbar}>
             {site.avatar && (
-              <Avatar src={site.avatar} className={classes.avatar} />
+              <Avatar src={site.avatar} className={classes.drawerAvatar} />
             )}
             <Typography variant="h5" color="inherit" noWrap>
               {site.title}
@@ -82,10 +85,4 @@ const F1Drawer = props => {
     </>
   );
 };
-
-F1Drawer.propTypes = {
-  classes: PropTypes.object.isRequired,
-  theme: PropTypes.object.isRequired
-};
-
-export default withStyles(styles, { withTheme: true })(F1Drawer);
+export default F1Drawer;
