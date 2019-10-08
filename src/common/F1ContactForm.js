@@ -32,8 +32,7 @@ const F1ContactForm = props => {
   };
 
   const handleChange = e => {
-    const update = { ...contactInfo, [e.target.id]: e.target.value };
-    setContactInfo(update);
+    setContactInfo({ ...contactInfo, [e.target.id]: e.target.value });
   };
 
   return (
