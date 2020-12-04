@@ -6,10 +6,10 @@ import ListItemText from "@material-ui/core/ListItemText";
 import SiteContext from "../siteContext";
 import { makeStyles } from "@material-ui/core/styles";
 import { Link } from "react-router-dom";
-import F1Styles from "./F1Styles";
+import MFStyles from "./MFStyles";
 
 const useStyles = makeStyles(theme => ({
-  ...F1Styles(theme),
+  ...MFStyles(theme),
   menuItemText: {
     color: "navy"
   },
@@ -21,7 +21,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const F1MenuItems = props => {
+const MFMenuItems = props => {
   const classes = useStyles();
   const site = useContext(SiteContext);
 
@@ -53,19 +53,19 @@ const F1MenuItems = props => {
                 className={classes.menuItemLink}
               />
             ) : (
-              ""
-            )}
+                ""
+              )}
             {item.label ? (
               <ListItemText
                 classes={{ primary: classes.menuItemText }}
                 primary={item.label}
               />
             ) : (
-              ""
-            )}
+                ""
+              )}
           </ListItem>
         ))}
     </List>
   );
 };
-export default F1MenuItems;
+export default MFMenuItems;

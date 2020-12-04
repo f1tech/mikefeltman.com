@@ -6,10 +6,10 @@ import Avatar from "@material-ui/core/Avatar";
 import SiteContext from "./siteContext";
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
-import F1Styles from "./common/F1Styles";
+import MFStyles from "./common/MFStyles";
 
 const useStyles = makeStyles(theme => ({
-  ...F1Styles(theme)
+  ...MFStyles(theme)
 }));
 
 const About = props => {
@@ -26,8 +26,8 @@ const About = props => {
       />
       <CardContent>
         <Typography variant="body1" className={classes.cardContent}>
-          Mike Feltman has been president of F1 Technologies since founding the
-          company in 1990 as Neon Software. With Mike at the helm, F1
+          Mike Feltman has been president of MF Technologies since founding the
+          company in 1990 as Neon Software. With Mike at the helm, MF
           Technologies has enjoyed years of success as a consulting firm,
           training firm, distributor and most notably the developers of the
           FoxExpress line of application development tools.
@@ -44,7 +44,7 @@ const About = props => {
           FoxExpress” published by Hentzenwerke.
         </Typography>
         <Typography variant="body1" className={classes.cardContent}>
-          Mike is actively involved in F1 Technologies consulting practice and
+          Mike is actively involved in MF Technologies consulting practice and
           has developed numerous applications and web sites for a wide variety
           of industries including Automotive, Healthcare, Construction, Retail
           and Manufacturing. Mike has been involved with a number of successful
@@ -54,7 +54,7 @@ const About = props => {
           experienced in desktop, LAN, client-server and Internet development.
         </Typography>
         <Typography variant="body1" className={classes.cardContent}>
-          Prior to starting F1 Technologies, Mike worked at Fox Software - the
+          Prior to starting MF Technologies, Mike worked at Fox Software - the
           original creators of FoxPro. At Fox Software Mike worked in technical
           support, training and marketing, developed in-house systems and
           performed product maintenance on the FoxCentral module in FoxBase+

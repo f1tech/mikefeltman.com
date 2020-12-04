@@ -9,13 +9,13 @@ import CardHeader from "@material-ui/core/CardHeader";
 import Avatar from "@material-ui/core/Avatar";
 import IconButton from "@material-ui/core/IconButton";
 import SendIcon from "@material-ui/icons/Send";
-import F1Styles from "./F1Styles";
+import MFStyles from "./MFStyles";
 // TODO: Binding
 // TODO: Make the Send Button a FAB
 // TODO: Implement validation & sending the actual email.
-const useStyles = makeStyles(theme => F1Styles(theme));
+const useStyles = makeStyles(theme => MFStyles(theme));
 
-const F1ContactForm = props => {
+const MFContactForm = props => {
   const site = useContext(SiteContext);
   const classes = useStyles();
   const [contactInfo, setContactInfo] = useState({
@@ -120,4 +120,4 @@ const F1ContactForm = props => {
     </Card>
   );
 };
-export default F1ContactForm;
+export default MFContactForm;

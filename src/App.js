@@ -7,18 +7,18 @@ import Typography from "@material-ui/core/Typography";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import { BrowserRouter as Router } from "react-router-dom";
-import F1BottomNav from "./common/F1BottomNav";
-import F1Drawer from "./common/F1Drawer";
-import F1MenuItems from "./common/F1MenuItems";
-import F1TopNav from "./common/F1TopNav";
-import F1Routes from "./common/F1Routes";
+import MFBottomNav from "./common/MFBottomNav";
+import MFDrawer from "./common/MFDrawer";
+import MFMenuItems from "./common/MFMenuItems";
+import MFTopNav from "./common/MFTopNav";
+import MFRoutes from "./common/MFRoutes";
 import SiteContext from "./siteContext";
 import { Link } from "react-router-dom";
-import F1SignOn from "./common/F1SignOn";
-import F1Styles from "./common/F1Styles";
+import MFSignOn from "./common/MFSignOn";
+import MFStyles from "./common/MFStyles";
 
 const useStyles = makeStyles(theme => ({
-  ...F1Styles(theme),
+  ...MFStyles(theme),
   app: {
     margin: theme.spacing(0),
     minHeight: "100vh"
@@ -51,25 +51,25 @@ function App() {
       <Router>
         <AppBar position="static">
           <Toolbar>
-            <F1Drawer>
-              <F1MenuItems />
-            </F1Drawer>
+            <MFDrawer>
+              <MFMenuItems />
+            </MFDrawer>
             <Typography variant="h5">
               <Link className={classes.appTitle} to="/" variant="h5">
                 {site.title}
               </Link>
             </Typography>
             <div className={classes.grow} />
-            <F1TopNav />
-            <F1SignOn />
+            <MFTopNav />
+            <MFSignOn />
           </Toolbar>
         </AppBar>
         <Grid container direction="column" justify="center" alignItems="center">
           <Grid item className={classes.mainContent}>
-            <F1Routes />
+            <MFRoutes />
           </Grid>
           <Grid item className={classes.footer}>
-            <F1BottomNav />
+            <MFBottomNav />
             <Typography variant="body2" align="center">
               Made with
               <LoveIcon className={classes.loveIcon} />

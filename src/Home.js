@@ -8,11 +8,11 @@ import Card from "@material-ui/core/Card";
 import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
-import F1Socials from "./common/F1Socials";
-import F1Styles from "./common/F1Styles";
+import MFSocials from "./common/MFSocials";
+import MFStyles from "./common/MFStyles";
 
 const useStyles = makeStyles(theme => ({
-  ...F1Styles(theme),
+  ...MFStyles(theme),
   App: {
     margin: theme.spacing(2)
   },
@@ -144,7 +144,7 @@ const Home = props => {
         }
       ></CardHeader>
       <CardActions>
-        <F1Socials />
+        <MFSocials />
       </CardActions>
       <CardContent>
         <CardMedia
@@ -193,7 +193,7 @@ function getTerms() {
       definition:
         "a person who organizes and operates a business or businesses, taking on greater than normal financial risks in order to do so.",
       details:
-        "Mike founded F1 Technologies at 23 years of age and has lead successful consulting, training and product ventures. One of his software products sold over 10,000 copies in over 100 countries."
+        "Mike founded MF Technologies at 23 years of age and has lead successful consulting, training and product ventures. One of his software products sold over 10,000 copies in over 100 countries."
     },
     {
       word: "Polyglot",

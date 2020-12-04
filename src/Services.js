@@ -6,10 +6,10 @@ import Avatar from "@material-ui/core/Avatar";
 import SiteContext from "./siteContext";
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
-import F1Styles from "./common/F1Styles";
+import MFStyles from "./common/MFStyles";
 
 const useStyles = makeStyles(theme => ({
-  ...F1Styles(theme)
+  ...MFStyles(theme)
 }));
 
 const About = () => {
@@ -31,7 +31,7 @@ const About = () => {
           you need a helping hand. Whether you need analysis and design
           assistance, additional programming support, custom application
           development, technical project mentoring or advice on the latest
-          technology, F1 Technologies can help.
+          technology, MF Technologies can help.
         </Typography>
         <Typography variant="body1" className={classes.cardContent}>
           Our solutions allow your business to reduce costs, increase worker

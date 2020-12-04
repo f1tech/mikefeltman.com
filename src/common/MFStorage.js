@@ -1,4 +1,4 @@
-class F1Storage {
+class MFStorage {
   // type = "localStorage";
   type = "sessionStorage";
 
@@ -57,14 +57,14 @@ class F1Storage {
 
   // Doing these for the purposes of making requests that we want to send cookies on.
   // TODO: convert store to cookies
-  toCookies() {}
+  toCookies() { }
 
   // TODO: populate store from cookies
-  fromCookies() {}
+  fromCookies() { }
 
   getPropValSetting(val) {
     return typeof val === "object" ? JSON.stringify(val) : val;
   }
 }
 
-export default F1Storage;
+export default MFStorage;

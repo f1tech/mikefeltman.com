@@ -17,7 +17,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-export default function F1BottomNav() {
+export default function MFBottomNav() {
   const classes = useStyles();
   const site = useContext(SiteContext);
 
@@ -48,8 +48,8 @@ export default function F1BottomNav() {
                 className={classes.linkButton}
               />
             ) : (
-              ""
-            )}
+                ""
+              )}
             {button.label}
           </Button>
         ))}

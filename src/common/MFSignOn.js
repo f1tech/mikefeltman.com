@@ -11,35 +11,36 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const F1SignOn = props => {
+const MFSignOn = props => {
   const site = useContext(SiteContext);
+  const authService = { props };
   const classes = useStyles();
-  const [isLoggedIn, setIsLoggedIn] = useState();
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   let loginStatus;
-  if (site.authService) {
-    if (isLoggedIn !== site.authService.authenticated) {
-      setIsLoggedIn(site.authService.authenticated);
+  if (authService) {
+    if (isLoggedIn !== authService.authenticated) {
+      setIsLoggedIn(authService.authenticated);
     }
     // really should have the auth service handling this
     // but haven't figured out how to get a cleaner reference to
     // stash
     let token = site.stash.get("authToken");
     if (token) {
-      site.authService.token = token;
+      authService.token = token;
     }
     const logInOut = logIn => {
       let startStatus = loginStatus;
       if (logIn) {
-        loginStatus = site.authService.login();
+        loginStatus = authService.login();
       } else {
-        loginStatus = site.authService.logout();
+        loginStatus = authService.logout();
       }
 
-      if (startStatus !== site.authService.authenticated) {
-        setIsLoggedIn(site.authService.authenticated);
+      if (startStatus !== authService.authenticated) {
+        setIsLoggedIn(authService.authenticated);
       }
 
-      site.stash.set("authToken", site.authService.token);
+      site.stash.set("authToken", authService.token);
       console.log(site.stash.get("authToken"));
     };
 
@@ -62,4 +63,4 @@ const F1SignOn = props => {
   }
 };
 
-export default F1SignOn;
+export default MFSignOn;

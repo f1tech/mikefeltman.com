@@ -1,4 +1,4 @@
-export default class F1AuthSevice {
+export default class MFAuthSevice {
   token = "";
 
   constructor(props) {

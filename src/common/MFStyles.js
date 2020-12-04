@@ -1,4 +1,4 @@
-const F1Styles = theme => {
+const MFStyles = theme => {
   return {
     avatar: {
       height: 80,
@@ -21,4 +21,4 @@ const F1Styles = theme => {
     }
   };
 };
-export default F1Styles;
+export default MFStyles;

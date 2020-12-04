@@ -5,7 +5,7 @@ import SiteContext from "../siteContext";
 import { Route, Switch, withRouter } from "react-router-dom";
 import Home from "../Home";
 
-const F1Routes = props => {
+const MFRoutes = props => {
   const site = useContext(SiteContext);
 
   return (
@@ -30,7 +30,7 @@ const F1Routes = props => {
   );
 };
 
-export default withRouter(F1Routes);
+export default withRouter(MFRoutes);
 
 // need this when auth is implemented.
 // const PrivateRoute = ({ component: Component, ...rest }) => {

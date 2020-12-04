@@ -11,7 +11,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-export default function F1Socials() {
+export default function MFSocials() {
   const site = useContext(SiteContext);
   const classes = useStyles();
 
@@ -30,8 +30,8 @@ export default function F1Socials() {
                 />
               </IconButton>
             ) : (
-              <IconButton size="medium">{button.icon}</IconButton>
-            )}
+                <IconButton size="medium">{button.icon}</IconButton>
+              )}
           </Tooltip>
         ))}
     </>

@@ -8,13 +8,13 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import SiteContext from "../siteContext";
 import Avatar from "@material-ui/core/Avatar";
-import F1Styles from "./F1Styles";
+import MFStyles from "./MFStyles";
 
 const drawerWidth = 300;
 
 // const styles = theme => ({
 const useStyles = makeStyles(theme => ({
-  ...F1Styles(theme),
+  ...MFStyles(theme),
   appBar: {
     position: "absolute",
     marginLeft: 0,
@@ -35,7 +35,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const F1Drawer = props => {
+const MFDrawer = props => {
   const site = useContext(SiteContext);
 
   const [state, setState] = useState({
@@ -85,4 +85,4 @@ const F1Drawer = props => {
     </>
   );
 };
-export default F1Drawer;
+export default MFDrawer;

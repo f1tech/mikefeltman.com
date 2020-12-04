@@ -8,8 +8,8 @@ import Home from "./Home";
 import About from "./About";
 import Services from "./Services";
 import Contact from "./Contact";
-import AuthService from "./common/F1AuthService";
-import F1Storage from "./common/F1Storage";
+import AuthService from "./common/MFAuthService";
+import MFStorage from "./common/MFStorage";
 
 /* just a workaround right now so I can specify props in the components. 
 I haven't figured out how to pass them yet. */
@@ -23,17 +23,17 @@ const site = {
     loginUrl: "login",
     adminPassword: "password"
   }),
-  stash: new F1Storage(),
+  stash: new MFStorage(),
   useAuth: true,
   title: "Mike Feltman",
   location: {
-    name: "F1 Technologies",
+    name: "MF Technologies",
     address: "597 Heather Lane",
     city: "Grosse Pointe Woods",
     state: "Michigan",
     postalCode: "48236",
     mapLink:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2944.5655751931536!2d-82.88708638434605!3d42.43698103823262!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882529978e18996f%3A0x8d8e103ec5409f19!2sF1%20Technologies!5e0!3m2!1sen!2sus!4v1569867001115!5m2!1sen!2sus"
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2944.5655751931536!2d-82.88708638434605!3d42.43698103823262!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4MF3.1!3m3!1m2!1s0x882529978e18996f%3A0x8d8e103ec5409MF9!2sMF%20Technologies!5e0!3m2!1sen!2sus!4v1569867001115!5m2!1sen!2sus"
   },
   contact: {
     email: "mikefeltman@gmail.com",
@@ -95,7 +95,7 @@ const site = {
     },
     {
       img: "./img/GitHub.png",
-      link: "https://github.com/f1tech",
+      link: "https://github.com/MFtech",
       tip: "Check out my code on Github",
       social: true,
       top: true,
