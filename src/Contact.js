@@ -24,7 +24,6 @@ function TabPanel(props) {
 }
 
 const Contact = props => {
-  console.log({ props });
   const [tabIndex, setTabIndex] = useState(0);
   const changeTab = (event, newValue) => {
     setTabIndex(newValue);

@@ -70,7 +70,6 @@ const Home = props => {
     setTermPosition();
   };
   const setTermPosition = () => {
-    console.log("setting position");
     //TODO: On mobile display all of this in a dialog.
     let rectangle = imageEl.current.getBoundingClientRect();
     leftTextEl.current.style.left = rectangle.left + 5 + "px";

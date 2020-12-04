@@ -41,7 +41,6 @@ const MFSignOn = props => {
       }
 
       site.stash.set("authToken", authService.token);
-      console.log(site.stash.get("authToken"));
     };
 
     if (isLoggedIn) {
