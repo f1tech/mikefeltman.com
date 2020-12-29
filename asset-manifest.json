@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/mikefeltman.com/static/css/main.4a4137e4.chunk.css",
-    "main.js": "/mikefeltman.com/static/js/main.c1921240.chunk.js",
-    "main.js.map": "/mikefeltman.com/static/js/main.c1921240.chunk.js.map",
-    "runtime-main.js": "/mikefeltman.com/static/js/runtime-main.5ffe0c44.js",
-    "runtime-main.js.map": "/mikefeltman.com/static/js/runtime-main.5ffe0c44.js.map",
-    "static/css/2.dc901f2b.chunk.css": "/mikefeltman.com/static/css/2.dc901f2b.chunk.css",
-    "static/js/2.cc2f9b84.chunk.js": "/mikefeltman.com/static/js/2.cc2f9b84.chunk.js",
-    "static/js/2.cc2f9b84.chunk.js.map": "/mikefeltman.com/static/js/2.cc2f9b84.chunk.js.map",
-    "index.html": "/mikefeltman.com/index.html",
-    "static/css/2.dc901f2b.chunk.css.map": "/mikefeltman.com/static/css/2.dc901f2b.chunk.css.map",
-    "static/css/main.4a4137e4.chunk.css.map": "/mikefeltman.com/static/css/main.4a4137e4.chunk.css.map",
-    "static/js/2.cc2f9b84.chunk.js.LICENSE.txt": "/mikefeltman.com/static/js/2.cc2f9b84.chunk.js.LICENSE.txt",
-    "static/media/mffire.70b4029f.jpg": "/mikefeltman.com/static/media/mffire.70b4029f.jpg",
-    "static/media/index.css": "/mikefeltman.com/static/media/roboto-latin-900italic.cb5ad999.woff2"
+    "main.css": "/mikefeltman/static/css/main.4a4137e4.chunk.css",
+    "main.js": "/mikefeltman/static/js/main.0b515cdd.chunk.js",
+    "main.js.map": "/mikefeltman/static/js/main.0b515cdd.chunk.js.map",
+    "runtime-main.js": "/mikefeltman/static/js/runtime-main.4f948149.js",
+    "runtime-main.js.map": "/mikefeltman/static/js/runtime-main.4f948149.js.map",
+    "static/css/2.ec02bfc8.chunk.css": "/mikefeltman/static/css/2.ec02bfc8.chunk.css",
+    "static/js/2.cc2f9b84.chunk.js": "/mikefeltman/static/js/2.cc2f9b84.chunk.js",
+    "static/js/2.cc2f9b84.chunk.js.map": "/mikefeltman/static/js/2.cc2f9b84.chunk.js.map",
+    "index.html": "/mikefeltman/index.html",
+    "static/css/2.ec02bfc8.chunk.css.map": "/mikefeltman/static/css/2.ec02bfc8.chunk.css.map",
+    "static/css/main.4a4137e4.chunk.css.map": "/mikefeltman/static/css/main.4a4137e4.chunk.css.map",
+    "static/js/2.cc2f9b84.chunk.js.LICENSE.txt": "/mikefeltman/static/js/2.cc2f9b84.chunk.js.LICENSE.txt",
+    "static/media/mffire.70b4029f.jpg": "/mikefeltman/static/media/mffire.70b4029f.jpg",
+    "static/media/index.css": "/mikefeltman/static/media/roboto-latin-900italic.cb5ad999.woff2"
   },
   "entrypoints": [
-    "static/js/runtime-main.5ffe0c44.js",
-    "static/css/2.dc901f2b.chunk.css",
+    "static/js/runtime-main.4f948149.js",
+    "static/css/2.ec02bfc8.chunk.css",
     "static/js/2.cc2f9b84.chunk.js",
     "static/css/main.4a4137e4.chunk.css",
-    "static/js/main.c1921240.chunk.js"
+    "static/js/main.0b515cdd.chunk.js"
   ]
 }
