@@ -48,7 +48,7 @@ function App() {
   return (
     <div className={classes.app}>
       <CssBaseline />
-      <Router>
+      <Router basename="/mikefeltman.com">
         <AppBar position="static">
           <Toolbar>
             <MFDrawer>
